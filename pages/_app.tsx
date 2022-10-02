@@ -1,8 +1,20 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import Sidebar from "../components/sidebar";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <title>Magic Todo</title>
+      </Head>
+      <div className="flex">
+        <Sidebar />
+        <Component {...pageProps} />
+      </div>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
