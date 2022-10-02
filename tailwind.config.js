@@ -778,7 +778,6 @@ module.exports = {
         "serif",
       ],
       body: ["Roboto", "sans-serif"],
-      awesome: ["FontAwesome"],
     },
     fontSize: ({ theme }) => ({
       ...theme("spacing"),
@@ -1459,7 +1458,6 @@ module.exports = {
         p: {
           "line-height": "1.625",
           "font-weight": "400",
-          "margin-bottom": "1rem",
         },
 
         small: {
@@ -1475,8 +1473,7 @@ module.exports = {
         },
 
         "h1, h2, h3, h4, h5, h6": {
-          "margin-bottom": ".5rem",
-          color: "#344767",
+            color: "#344767",
         },
 
         "h1, h2, h3, h4": {
