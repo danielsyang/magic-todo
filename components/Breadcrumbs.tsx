@@ -1,19 +1,9 @@
 import { useRouter } from "next/router";
 
-function getTitleFromPathname(pathname: string) {
-  switch (true) {
-    case pathname.includes("todo"):
-      return "to do";
-    case pathname.includes("journal"):
-      return "journal";
-    default:
-      return "";
-  }
-}
-
 export default function Breadcrumbs() {
   const { pathname } = useRouter();
-  const path = ["dashboard"].concat(getTitleFromPathname(pathname));
+  const routes = pathname.split("/").filter((val) => val !== "");
+  const path = ["dashboard"].concat(routes);
 
   return (
     <div className="flex mb-2 text-sm text-slate-700 opacity-50">
